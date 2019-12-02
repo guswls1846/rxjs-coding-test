@@ -1,0 +1,23 @@
+{
+  "name": "pplink-dev-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts-node": "node ./node_modules/ts-node/dist/bin.js",
+    "rxjs/emit-with-interval": "./node_modules/.bin/ts-node rxjs-tests/emit-with-interval/index.ts",
+    "rxjs/filter-close-points": "./node_modules/.bin/ts-node rxjs-tests/filter-close-points/index.ts",
+    "rxjs/retry-interval-timeout": "./node_modules/.bin/ts-node rxjs-tests/retry-interval-timeout/index.ts",
+    "rxjs/count-sequence-match": "./node_modules/.bin/ts-node rxjs-tests/count-sequence-match/index.ts",
+    "rxjs/power-of-n": "./node_modules/.bin/ts-node rxjs-tests/power-of-n/index.ts",
+    "rxjs/grouping": "./node_modules/.bin/ts-node rxjs-tests/grouping/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^6.4.0",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.7.2"
+  }
+}
