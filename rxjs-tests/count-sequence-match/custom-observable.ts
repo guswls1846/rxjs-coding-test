@@ -1,4 +1,5 @@
-import { Observable } from "rxjs";
+import { Observable, from } from "rxjs";
+import { sequenceEqual, switchMap } from "rxjs/operators";
 import { target$, matchSequence } from "./lib/test-source";
 
 /**
@@ -6,8 +7,4 @@ import { target$, matchSequence } from "./lib/test-source";
  * Do not add any global variable.
  */
 
-export const output$: Observable<number> = target$.pipe(
-  // TODO
-);
-
-
+export const output$: Observable<number> = target$.pipe(sequenceEqual(matchSequence));
