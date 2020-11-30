@@ -1,5 +1,5 @@
 import { pipe, UnaryFunction, Observable } from "rxjs";
-import { filter, groupBy, mergeMap, toArray, map, tap } from "rxjs/operators";
+import { filter, groupBy, mergeMap, toArray, map } from "rxjs/operators";
 export function sortByTitle(gender: string): UnaryFunction<Observable<any>, Observable<string[]>> {
   return pipe(
     // TODO

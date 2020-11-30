@@ -1,5 +1,5 @@
-import { Observable, interval, from, of, concat } from "rxjs";
-import { map, concatMap, delay, mergeMap, switchMap, takeUntil, takeWhile } from "rxjs/operators";
+import { Observable, interval, from, of } from "rxjs";
+import { map, concatMap, takeWhile } from "rxjs/operators";
 
 export function output$(input: number[]): Observable<number> {
   // TODO
