@@ -8,9 +8,9 @@ import { target$, target2$, matchSequence, matchSequence2 } from "./lib/test-sou
  */
 
 export const output$: Observable<any> = target$.pipe(
-  bufferCount(matchSequence.length, 1),
+  bufferCount(matchSequence.length, matchSequence.length - 1),
   filter((x) => {
-    // console.log(x.join(""));
+    console.log(x.join(""));
     return x.join("") === matchSequence;
   }),
   count()
