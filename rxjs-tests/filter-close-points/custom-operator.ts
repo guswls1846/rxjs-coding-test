@@ -1,8 +1,11 @@
 import { pipe, Observable, UnaryFunction } from "rxjs";
 import { Point } from "./lib/test-source";
+import { distinctUntilChanged } from "rxjs/operators";
 
 export function filterClosePoints(distance: number): UnaryFunction<Observable<Point>, Observable<Point>> {
-  return pipe();
-  // TODO
+  return pipe(
+    distinctUntilChanged((prev, next) => {
+      return Math.sqrt((prev.x - next.x) ** 2 + (prev.y - next.y) ** 2) < distance;
+    })
+  );
 }
-//못풀었습니다. 합격 여부와 관계없이 실력향상을 위해 정답을 알려주시면 감사하겠습니다.
