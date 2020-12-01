@@ -1,4 +1,4 @@
-import { from } from "rxjs";
+import { from, asyncScheduler } from "rxjs";
 
 const targetSequence = `adjasdhsakdjsahdksahdaacdegfadnsakdjsakdhjasasdo
 asdasjdhsadsaacdadasdasdasdasdasdanjakdashdkhaslkdhaskdhashdjashjcdlksahjdhaskljdhdsadsajdhsakdhjashdkashdlsajdd
@@ -6,5 +6,8 @@ adsaldkjsadkjlsahdjashjdklasjhdklashdklasdacdefggadjsakdhjsahdkjsaachdkjashldjha
 adascascacacadasdasdsadasacdefdasdsadsadasacadasdasdasacacacadasdsaacacacacacdasdasdjsakdksjfhldsjhflidshfldsfhisbhlfbslfblsjzfb;szfb
 adnjkasdjlsahdljkashjkdhsakljdhkajsdhklasdhkjlacacacacacadhdkahdjlahdjlahlkdhaskjdhalksdhkalhdahacacacakchkashdlkahdkahjdkhakldhaslkhdac
 acjkashkashljkdhaskjldhasldhsalkdhlkascacacsjhdalskdhkashdlkashdh`;
+const targetSequence2 = `acbqibekboabkdnopenmenuckofqamdqlvopenmenuasdqweascqwekasdcnaskdeqweqwcasdopenmenu`;
 export const matchSequence = "acacac";
+export const matchSequence2 = "openmenu";
 export const target$ = from(targetSequence);
+export const target2$ = from(targetSequence2);
